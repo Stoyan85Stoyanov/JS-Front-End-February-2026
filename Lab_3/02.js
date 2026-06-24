@@ -1,7 +1,7 @@
 function mathPower(number, power) {
 
-    let result = Math.pow(number, power);
-    console.log(result);
+    let resultPower = Math.pow(number, power);
+    console.log(resultPower);
 
      // let result = number ** power;
     // console.log(result);
