@@ -25,7 +25,7 @@ function solve(inputData) {
     for (let i = n + 1; inputData.length; i++) {
         let items = inputData[i].split(" / ");
         let commands = items[0];
-        // името на текущият астронавт
+    
         let astronautName = items[1];
 
         if (commands === "End") {
