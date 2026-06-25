@@ -1,13 +1,9 @@
 function solve(inputData) {
 
     const astronauts = [];
-    // On the first line of the input, 
-    // you will receive an integer n – the number of astronauts in your crew.
     let n = Number(inputData[0]);
 
-    // "2",
-    //"Alice command_module piloting,communications",
-    //"Bob engineering_bay repair,maintenance",
+  
     for (let i = 1; i <= n; i++) {
         let line = inputData[i];
         let [name, section, skills] = line.split(" ");
