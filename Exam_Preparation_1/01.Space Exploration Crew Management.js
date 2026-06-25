@@ -17,7 +17,6 @@ function solve(inputData) {
         astronauts.push(astronaut);
     }
 
-    //  "Perform / Alice / command_module / piloting",
     for (let i = n + 1; inputData.length; i++) {
         let items = inputData[i].split(" / ");
         let commands = items[0];
