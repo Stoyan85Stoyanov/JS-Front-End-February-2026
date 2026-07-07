@@ -1,0 +1,9 @@
+async function loadRepos() {
+  
+   const divElement = document.getElementById('res');
+
+   const res = await fetch("https://api.github.com/repos/Stoyan85Stoyanov/test");
+   const data = await res.text();
+
+   divElement.textContent = data;
+}
