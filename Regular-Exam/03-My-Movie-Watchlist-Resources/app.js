@@ -112,7 +112,9 @@ async function createMovie() {
 
 
 async function editMovie() {
-    if (!movieToEdit) return;
+    if (!movieToEdit) {
+        return;
+    } 
 
     const updatedMovie = getInputData();
 
