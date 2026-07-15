@@ -1,10 +1,10 @@
 function solve(inputData) {
 
     const astronauts = [];
-    let n = Number(inputData[0]);
+    let number = Number(inputData[0]);
 
   
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= number; i++) {
         let line = inputData[i];
         let [name, section, skills] = line.split(" ");
 
