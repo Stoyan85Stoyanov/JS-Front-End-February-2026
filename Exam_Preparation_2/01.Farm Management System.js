@@ -20,14 +20,7 @@ function solve(input) {
         farmers[nameFarmer] = { workArea, tasks };
     }
 
-    //"Execute / John / garden / watering",
-    //"Execute / Mary / garden / feeding",
-    //"Learn Task / John / planting",
-    //"Execute / John / garden / planting",
-    //"Change Area / Mary / garden",
-    //"Execute / Mary / garden / cleaning",
-    //"End"
-
+    
     let commands = n + 1;
 
     while (input[commands] != "End") {
