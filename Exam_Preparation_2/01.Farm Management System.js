@@ -9,7 +9,7 @@ function solve(input) {
     // n – the number of farmers in your team
     const n = Number(input[0]);
 
-    // On the next n lines, the details of each farmer 
+    
     for (let i = 1; i <= n; i++) {
         const data = input[i].split(" ");
 
@@ -20,7 +20,7 @@ function solve(input) {
         farmers[nameFarmer] = { workArea, tasks };
     }
 
-    
+
     let commands = n + 1;
 
     while (input[commands] != "End") {
