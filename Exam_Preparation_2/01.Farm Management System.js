@@ -63,7 +63,7 @@ function solve(input) {
             const farmerName = data[1];
             const newTask = data[2];
 
-            // взимаме фермера 
+            
             const requestedFarmer = farmers[farmerName];
 
             if (requestedFarmer.tasks.includes(newTask)) {
