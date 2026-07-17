@@ -3,7 +3,7 @@ function solve(input) {
     //   "2",
     //"John garden watering,weeding",
     //"Mary barn feeding,cleaning",
-    const farmers = {}; // фермерите се съхраняват в обект !!!!
+    const farmers = {}; 
 
     
     const n = Number(input[0]);
