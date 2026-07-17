@@ -5,8 +5,7 @@ function solve(input) {
     //"Mary barn feeding,cleaning",
     const farmers = {}; // фермерите се съхраняват в обект !!!!
 
-    // On the first line of the input, you will receive an integer 
-    // n – the number of farmers in your team
+    
     const n = Number(input[0]);
 
     
