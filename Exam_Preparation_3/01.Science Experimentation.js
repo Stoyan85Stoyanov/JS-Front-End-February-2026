@@ -81,7 +81,6 @@ function solve(input) {
 
     });
 
-    // log({ chemicals });
 
     Object.keys(chemicals).forEach(name => {
 
