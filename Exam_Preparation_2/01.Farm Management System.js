@@ -2,10 +2,10 @@ function solve(input) {
 
    
     const farmers = {}; 
-    const n = Number(input[0]);
+    const number = Number(input[0]);
 
     
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= number; i++) {
         const data = input[i].split(" ");
 
         const nameFarmer = data[0];
@@ -16,7 +16,7 @@ function solve(input) {
     }
 
 
-    let commands = n + 1;
+    let commands = number + 1;
 
     while (input[commands] != "End") {
         const data = input[commands].split(" / ");
