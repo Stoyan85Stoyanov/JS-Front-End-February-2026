@@ -1,6 +1,6 @@
 function solve(input) {
 
-    let n = Number(input.shift());
+    let number = Number(input.shift());
     let guild = [];
 
     function addMember(name, role, skills) {
@@ -12,7 +12,7 @@ function solve(input) {
     }
 
 
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < number; i++) {
         let tokens = input.shift().split(' ');
         let name = tokens[0];
         let role = tokens[1];
