@@ -108,11 +108,11 @@
 
 function solve(input) {
 
-    const n = Number(input.shift());
+    const number = Number(input.shift());
     const board = {};
 
 
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < number; i++) {
         const line = input.shift().split(":");
 
         const assignee = line[0];
