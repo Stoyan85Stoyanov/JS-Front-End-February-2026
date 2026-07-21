@@ -143,6 +143,7 @@ function solve(input) {
         if (heroes[name].bullets > 0) {
             heroes[name].bullets--;
             console.log(`${name} has successfully hit ${target} and now has ${heroes[name].bullets} bullets!`);
+            
         } else {
             console.log(`${name} doesn't have enough bullets to shoot at ${target}!`);
         }
