@@ -82,6 +82,7 @@ function solve(input) {
                     let reversed = reverseString(part);
                     spell += reversed;
                     console.log(spell);
+                    
                 } else {
                     console.log("Error");
                 }
