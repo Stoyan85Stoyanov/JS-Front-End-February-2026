@@ -93,7 +93,9 @@ function startEdit(appointment) {
 
 async function editAppointment(event) {
     event.preventDefault();
-    if (!selectedId) return;
+    if (!selectedId) {
+        return;
+    } 
 
     await fetch(`${BASE_URL}/${selectedId}`, {
         method: 'PUT',
