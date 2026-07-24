@@ -189,7 +189,9 @@ function createWorkoutCard(workout) {
 
 async function createWorkout() {
     const data = getInputData();
-    if (!data) return;
+    if (!data) {
+      return;  
+    } 
 
     await fetch(API_URL, {
         method: "POST",
