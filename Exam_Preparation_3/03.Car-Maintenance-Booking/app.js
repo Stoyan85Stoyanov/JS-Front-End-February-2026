@@ -93,6 +93,7 @@ function startEdit(appointment) {
 
 async function editAppointment(event) {
     event.preventDefault();
+    
     if (!selectedId) {
         return;
     } 
