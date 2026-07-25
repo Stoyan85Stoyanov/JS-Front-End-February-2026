@@ -205,7 +205,9 @@ async function createWorkout() {
 
 
 async function editWorkout() {
-    if (!workoutToEdit) return;
+    if (!workoutToEdit) {
+        return;
+    } 
 
     const data = getInputData();
     if (!data) return;
