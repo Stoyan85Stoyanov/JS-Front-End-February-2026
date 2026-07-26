@@ -234,7 +234,9 @@ function getInputData() {
     const location = locationInput.value.trim();
     const date = dateInput.value.trim();
 
-    if (!workout || !location || !date) return null;
+    if (!workout || !location || !date) {
+      return null;  
+    }
 
     return { workout, location, date };
 }
