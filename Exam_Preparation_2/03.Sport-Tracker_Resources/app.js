@@ -210,7 +210,9 @@ async function editWorkout() {
     } 
 
     const data = getInputData();
-    if (!data) return;
+    if (!data) {
+       return; 
+    } 
 
     await fetch(`${API_URL}/${workoutToEdit._id}`, {
         method: "PUT",
