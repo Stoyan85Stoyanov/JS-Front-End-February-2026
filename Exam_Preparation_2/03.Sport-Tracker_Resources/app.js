@@ -189,6 +189,7 @@ function createWorkoutCard(workout) {
 
 async function createWorkout() {
     const data = getInputData();
+    
     if (!data) {
       return;  
     } 
