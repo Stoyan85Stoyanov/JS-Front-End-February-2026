@@ -87,22 +87,6 @@
 
 
 
-function monthPrinter(month) {
-    const months = [
-        "January", "February", "March", "April",
-        "May", "June", "July", "August",
-        "September", "October", "November", "December"
-    ];
-
-    if (month >= 1 && month <= 12) {
-        console.log(months[month - 1]);
-
-    } else {
-        console.log("Error!");
-    }
-}
-
-
 // function monthPrinter(month) {
 //     const months = [
 //         "January", "February", "March", "April",
@@ -110,8 +94,24 @@ function monthPrinter(month) {
 //         "September", "October", "November", "December"
 //     ];
 
-//     console.log(month >= 1 && month <= 12 ? months[month - 1] : "Error!");
+//     if (month >= 1 && month <= 12) {
+//         console.log(months[month - 1]);
+
+//     } else {
+//         console.log("Error!");
+//     }
 // }
+
+
+function monthPrinter(month) {
+    const months = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+    ];
+
+    console.log(month >= 1 && month <= 12 ? months[month - 1] : "Error!");
+}
 
 
 monthPrinter(6);
