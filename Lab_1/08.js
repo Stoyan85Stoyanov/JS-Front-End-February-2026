@@ -1,6 +1,7 @@
 function circleArea(argument) {
 
     if (typeof argument === 'number') {
+        
         let circleArea = Math.PI * Math.pow(argument, 2);
         console.log(circleArea.toFixed(2));
         
