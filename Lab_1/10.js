@@ -1,7 +1,14 @@
-function numbersFromM_To_N(bigNumber, smallNumber) {
+// function numbersFromM_To_N(bigNumber, smallNumber) {
      
-    for (let num = bigNumber; num >= smallNumber; num--) {
-        console.log(num);  
+//     for (let num = bigNumber; num >= smallNumber; num--) {
+//         console.log(num);  
+//     }
+// }
+
+function numbersFromM_To_N(bigNumber, smallNumber) {
+    while (bigNumber >= smallNumber) {
+        console.log(bigNumber);
+        bigNumber--;
     }
 }
 
