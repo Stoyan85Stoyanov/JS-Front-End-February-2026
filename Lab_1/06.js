@@ -1,13 +1,36 @@
+// function largestNumber(numberOne, numberTwo, numberThree) {
+
+//     let largestNum = numberOne;
+    
+//     if (numberTwo > largestNum) {
+//         largestNum = numberTwo;   
+//     }
+    
+//     if (numberThree > largestNum) {
+//         largestNum = numberThree  
+//     }
+
+//     console.log(`The largest number is ${largestNum}.`);
+// }
+
+
+// function largestNumber(a, b, c) {
+//     console.log(`The largest number is ${Math.max(a, b, c)}.`);
+// }
+
+
 function largestNumber(numberOne, numberTwo, numberThree) {
 
-    let largestNum = numberOne;
-    
-    if (numberTwo > largestNum) {
-        largestNum = numberTwo;   
-    }
-    
-    if (numberThree > largestNum) {
-        largestNum = numberThree  
+    let largestNum;
+
+    if (numberOne >= numberTwo && numberOne >= numberThree) {
+        largestNum = numberOne;
+
+    } else if (numberTwo >= numberOne && numberTwo >= numberThree) {
+        largestNum = numberTwo;
+
+    } else {
+        largestNum = numberThree;
     }
 
     console.log(`The largest number is ${largestNum}.`);
