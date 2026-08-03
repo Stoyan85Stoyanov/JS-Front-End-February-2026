@@ -1,34 +1,60 @@
+// function mathOperations(numberOne, numberTwo, operator) {
+
+//     // let result = 0;
+
+//     switch (operator) {
+//         case '+':
+//             result = numberOne + numberTwo;
+//             break;
+
+//         case '-':
+//             result = numberOne - numberTwo;
+//             break;
+
+//         case '*':
+//             result = numberOne * numberTwo;
+//             break;
+
+//         case '/':
+//             result = numberOne / numberTwo;
+//             break;
+
+//         case '%':
+//             result = numberOne % numberTwo;
+//             break;
+
+//         case '**':
+//             result = numberOne ** numberTwo;
+//             break;
+
+//     }
+//      console.log(result);   
+// }
+
+
 function mathOperations(numberOne, numberTwo, operator) {
 
-    // let result = 0;
-    
-    switch (operator) {
-        case '+':
-            result = numberOne + numberTwo;
-            break;
+    if (operator === '+') {
+        result = numberOne + numberTwo;
 
-        case '-':
-            result = numberOne - numberTwo;
-            break;
+    } else if (operator === '-') {
+        result = numberOne - numberTwo;
 
-        case '*':
-            result = numberOne * numberTwo;
-            break;
-
-        case '/':
-            result = numberOne / numberTwo;
-            break;
-
-        case '%':
-            result = numberOne % numberTwo;
-            break;
-
-        case '**':
-            result = numberOne ** numberTwo;
-            break;
-
+    } else if (operator === '*') {
+        result = numberOne * numberTwo;
+        
+    } else if (operator === '/') {
+        result = numberOne / numberTwo;
+        
+    } else if (operator === '%') {
+        result = numberOne % numberTwo;
+        
+    } else if (operator === '**') {
+        result = numberOne ** numberTwo;
+        
     }
-     console.log(result);   
+
+    console.log(result);
 }
 
 mathOperations(5, 6, '+');
