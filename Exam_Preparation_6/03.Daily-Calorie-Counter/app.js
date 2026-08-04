@@ -233,6 +233,7 @@ const loadMeals = async () => {
        
         deleteBtn.addEventListener("click", async () => {
             const delResp = await fetch(`${baseURL}/${meal._id}`, { method: "DELETE" });
+
             if (!delResp.ok) {
                 return;
             }
@@ -247,6 +248,7 @@ addMealButton.addEventListener("click", async (e) => {
     e.preventDefault();
 
     const { food, time, calories } = getInputData();
+    
     if (!food || !time || !calories) {
        return; 
     } 
