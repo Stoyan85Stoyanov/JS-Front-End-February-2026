@@ -1,15 +1,10 @@
 function addItem() {
 
     const ulElement = document.getElementById('items');
-
     const inputElement = document.getElementById('newItemText');
-
     const text = inputElement.value.trim();
-
     const newLiElement = document.createElement('li');
-
     newLiElement.textContent = text;
-
     ulElement.appendChild(newLiElement);
 
 }
