@@ -6,10 +6,9 @@ function attachGradientEvents() {
     gradientDivEL.addEventListener('mousemove', handleMouseMove);
 
     function handleMouseMove(event) {
-        // информация за курсор
+
         const cursorDistanceFromLeft = event.offsetX;
 
-        // информация за event
         const divElWidth = event.target.clientWidth;
 
         const percent = Math.floor(cursorDistanceFromLeft / divElWidth * 100);
