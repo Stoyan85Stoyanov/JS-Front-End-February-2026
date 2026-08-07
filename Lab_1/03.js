@@ -20,16 +20,16 @@
 
 
 function excellentGrade(grade) {
-    let result;
+    let results;
 
     if (grade >= 5.50) {
-        result = "Excellent";
+        results = "Excellent";
 
     } else {
-        result = "Not excellent";
+        results = "Not excellent";
     }
 
-    console.log(result);
+    console.log(results);
 }
 
 
