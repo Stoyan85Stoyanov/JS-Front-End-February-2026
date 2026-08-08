@@ -1,9 +1,15 @@
+// function sumFirstAndLastArrayElements(numbers) {
+
+//     let firstElement = numbers[0];
+//     let lastElement = numbers[numbers.length - 1];
+
+//     console.log(firstElement + lastElement);
+    
+// }
+
 function sumFirstAndLastArrayElements(numbers) {
 
-    let firstElement = numbers[0];
-    let lastElement = numbers[numbers.length - 1];
-
-    console.log(firstElement + lastElement);
+    console.log(numbers[0] + numbers[numbers.length - 1]);
     
 }
 
