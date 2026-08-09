@@ -1,20 +1,36 @@
+// function evenAndOddSubtraction(numbers) {
+
+//     let evenSum = 0;
+//     let oddSum = 0;
+
+//     for (let num of numbers) {
+
+//         if (num % 2 === 0) {
+//             evenSum += num;
+
+//         } else {
+//             oddSum += num;
+//         }
+//     }
+
+//     console.log(evenSum - oddSum);   
+// }
+
+
 function evenAndOddSubtraction(numbers) {
+    let result = 0;
 
-    let evenSum = 0;
-    let oddSum = 0;
-
-    for (let num of numbers) {
+    numbers.forEach(num => {
 
         if (num % 2 === 0) {
-            evenSum += num;
+            result += num;
 
         } else {
-            oddSum += num;
+            result -= num;
         }
-    }
+    });
 
-    console.log(evenSum - oddSum);
-    
+    console.log(result);
 }
 
 evenAndOddSubtraction([1, 2, 3, 4, 5, 6]);
