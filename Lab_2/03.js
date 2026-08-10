@@ -20,13 +20,13 @@
 function evenAndOddSubtraction(numbers) {
     let result = 0;
 
-    numbers.forEach(num => {
+    numbers.forEach(number => {
 
-        if (num % 2 === 0) {
+        if (number % 2 === 0) {
             result += num;
 
         } else {
-            result -= num;
+            result -= number;
         }
     });
 
