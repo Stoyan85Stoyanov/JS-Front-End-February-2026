@@ -23,7 +23,7 @@ function evenAndOddSubtraction(numbers) {
     numbers.forEach(number => {
 
         if (number % 2 === 0) {
-            result += num;
+            result += number;
 
         } else {
             result -= number;
