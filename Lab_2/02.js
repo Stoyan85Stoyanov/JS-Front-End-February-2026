@@ -5,16 +5,28 @@
     
 // }
 
-function reverseAnArrayOfNumbers(number, numbers) {
+// function reverseAnArrayOfNumbers(number, numbers) {
 
+//     let result = [];
+
+//     for (let i = number - 1; i >= 0; i--) {
+//         result.push(numbers[i]);
+//     }
+
+//     console.log(result.join(' '));
+// }
+
+
+function reverseAnArrayOfNumbers(number, numbers) {
     let result = [];
 
-    for (let i = number - 1; i >= 0; i--) {
-        result.push(numbers[i]);
+    for (let i = 0; i < number; i++) {
+        result.push(numbers[number - 1 - i]);
     }
 
     console.log(result.join(' '));
 }
+
 
 reverseAnArrayOfNumbers(3, [10, 20, 30, 40, 50]);
 reverseAnArrayOfNumbers(4, [-1, 20, 99, 5]);
