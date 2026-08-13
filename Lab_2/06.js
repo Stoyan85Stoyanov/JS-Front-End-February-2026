@@ -6,10 +6,25 @@
 // }
 
 
-function countStringOccurrences(text, text_) {
+// function countStringOccurrences(text, text_) {
 
-    console.log(text.split(' ').filter(word => word === text_).length);
+//     console.log(text.split(' ').filter(word => word === text_).length);
      
+// }
+
+
+function countStringOccurrences(word, text) {
+
+    let count = 0;
+
+    for (const words of word.split(' ')) {
+        
+        if (words === text) {
+            count++;
+        }
+    }
+
+    console.log(count);
 }
 
 
