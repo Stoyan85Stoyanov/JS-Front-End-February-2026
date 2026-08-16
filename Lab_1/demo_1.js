@@ -30,3 +30,20 @@ calculate(10, 5);
 // The result is:  10
 // The result is:  15
 
+
+// Expression vs Statement
+// Expresion -> returns value
+// Statement -> makes action
+let number = 5;
+
+// Statement
+if (number < 10) {
+    console.log('Success!');
+    
+} else {
+    console.log('Fail!');
+}
+
+// Expression
+console.log(number < 10 ? 'Success!' : 'Fail!');
+
