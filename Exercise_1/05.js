@@ -1,10 +1,11 @@
 function multiplicationTable(number) {
 
-    for (let n = 1; n <= 10; n++) {
-        console.log(`${number} X ${n} = ${number * n}`);      
+    for (let times = 1; times <= 10; times++) {
+        let sumNumber = number * times;
+        console.log(`${number} X ${times} = ${sumNumber}`);      
     }
 
 }
 
 multiplicationTable(5);
-multiplicationTable(2);
+// multiplicationTable(2);
