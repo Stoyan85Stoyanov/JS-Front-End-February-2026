@@ -1,16 +1,20 @@
-function leapYear(year) {
+// function leapYear(year) {
      
-    const divisibleByFour = year % 4 === 0;
-    const divisibleByOneHundred = year % 100 === 0;
-    const divisibleByFourHundred = year % 400 === 0;
+//     const divisibleByFour = year % 4 === 0;
+//     const divisibleByOneHundred = year % 100 === 0;
+//     const divisibleByFourHundred = year % 400 === 0;
 
-    if (divisibleByFour && (divisibleByFourHundred || !divisibleByOneHundred)) {
-         console.log('yes');
+//     if (divisibleByFour && (divisibleByFourHundred || !divisibleByOneHundred)) {
+//          console.log('yes');
          
-    }else {
-        console.log('no');
+//     }else {
+//         console.log('no');
          
-    }
+//     }
+// }
+
+function leapYear(year) {
+    console.log(year % 400 === 0 || year % 4 === 0 && year % 100 !== 0 ? 'yes' : 'no');
 }
 
 leapYear(1984);
