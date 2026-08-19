@@ -4,15 +4,13 @@ function sumDigits(number) {
     let totalSum = 0;
 
     while (input > 0) {
-        let remainer = input % 10;
 
+        let remainer = input % 10;
         totalSum += remainer;
-        
         input = Math.trunc(input / 10);
     }
-
-    console.log(totalSum);
     
+    console.log(totalSum);   
 }
 
 sumDigits(245678);
