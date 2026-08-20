@@ -1,6 +1,12 @@
+// function charsToString(a, b, c) {
+
+//     console.log(a + b + c);
+    
+// }
+
 function charsToString(a, b, c) {
 
-    console.log(a + b + c);
+    console.log(a.concat(b).concat(c));
     
 }
 
