@@ -1,25 +1,50 @@
+// function sameNumbers(number) {
+
+//     let totalSum = 0;
+//     let allDigitsAreEquals = true;
+
+//     const targetDigit = number % 10;
+
+//     while (number !== 0) {
+//         const lastDigit = number % 10;
+//         totalSum += lastDigit;
+        
+//         if(lastDigit !== targetDigit) {
+//             allDigitsAreEquals = false;
+//         }
+     
+//         number = (number - lastDigit) / 10;    
+//     }
+
+//     console.log(allDigitsAreEquals);
+//     console.log(totalSum);
+    
+// }
+
+
+
 function sameNumbers(number) {
 
-    let totalSum = 0;
-    let allDigitsAreEquals = true;
+    const inputNumber = number.toString();
+    const lastCharacter = inputNumber.length - 1;
 
-    const targetDigit = number % 10;
+    let areEqual = true;
+    let totalSumNumber = 0;
 
-    while (number !== 0) {
-        const lastDigit = number % 10;
-        totalSum += lastDigit;
+    for (let i = 0; i < inputNumber.length; i++) {
         
-        if(lastDigit !== targetDigit) {
-            allDigitsAreEquals = false;
+        if (inputNumber[lastCharacter] != inputNumber[i]) {
+            areEqual = false;
         }
-     
-        number = (number - lastDigit) / 10;    
+
+        totalSumNumber += Number(inputNumber[i]);
+   
     }
 
-    console.log(allDigitsAreEquals);
-    console.log(totalSum);
-    
+    console.log(areEqual);
+    console.log(totalSumNumber);
 }
+
 
 sameNumbers(2222222);
 sameNumbers(1234);
