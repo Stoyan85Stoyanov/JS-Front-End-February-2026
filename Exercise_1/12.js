@@ -31,7 +31,7 @@
 
 function cookingByNumbers(number, ...operations) {
 
-    let result = Number(number);
+    let results = Number(number);
 
     for (let i = 0; i < operations.length; i++) {
         const action = operations[i];
@@ -39,31 +39,30 @@ function cookingByNumbers(number, ...operations) {
         switch (action) {
 
             case 'chop':
-                result /= 2;
+                results /= 2;
                 break;
 
             case 'dice':
-                result = Math.sqrt(result);
+                results = Math.sqrt(results);
                 break;
 
             case 'spice':
-                result += 1;
+                results += 1;
                 break;
 
             case 'bake':
-                result *= 3;
+                results *= 3;
                 break;
                 
             case 'fillet':
-                result -= result * 0.2;
+                results -= results * 0.2;
                 break;
         }
 
-        console.log(result);
+        console.log(results);
     }
 }
 
 
 cookingByNumbers('32', 'chop', 'chop', 'chop', 'chop', 'chop');
-console.log('----------------------------------------------');
 cookingByNumbers('9', 'dice', 'spice', 'chop', 'bake', 'fillet');
