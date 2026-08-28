@@ -28,20 +28,20 @@ function sameNumbers(number) {
     const inputNumber = number.toString();
     const lastCharacter = inputNumber.length - 1;
 
-    let areEqual = true;
+    let equal = true;
     let totalSumNumber = 0;
 
     for (let i = 0; i < inputNumber.length; i++) {
         
         if (inputNumber[lastCharacter] != inputNumber[i]) {
-            areEqual = false;
+            equal = false;
         }
 
         totalSumNumber += Number(inputNumber[i]);
    
     }
 
-    console.log(areEqual);
+    console.log(equal);
     console.log(totalSumNumber);
 }
 
