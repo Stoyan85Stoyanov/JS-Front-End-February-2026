@@ -62,7 +62,6 @@ function solve() {
 
         preparingListUlElement.appendChild(liElement);
 
-      
         createButtonElement.disabled = true;
         nameInputElement.value = "";
         locationSelectElement.value = "";
