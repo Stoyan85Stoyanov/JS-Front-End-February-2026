@@ -82,7 +82,6 @@ function solve() {
         editingItem = liElement;
 
         liElement.remove();
-
         createButtonElement.disabled = false;
     }
 
