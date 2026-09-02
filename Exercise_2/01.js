@@ -29,18 +29,28 @@
 // }
 
 
+// function arrayRotation(array, numberOfRotations) {
+
+//     const n = array.length;
+//     numberOfRotations %= n;
+
+//     let result = array.slice(numberOfRotations).concat(array.slice(0, numberOfRotations));
+
+//     console.log(result.join(" "));
+// }
+
+
 function arrayRotation(array, numberOfRotations) {
+    const number = array.length;
+    numberOfRotations %= number;
+
+    array.push(...array.splice(0, numberOfRotations));
     
-    const n = array.length;
-    numberOfRotations %= n;
-
-    let result = array.slice(numberOfRotations).concat(array.slice(0, numberOfRotations));
-
-    console.log(result.join(" "));
+    console.log(array.join(" "));
 }
-    
 
-    
+
+
 
 
 arrayRotation([51, 47, 32, 61, 21], 2);
