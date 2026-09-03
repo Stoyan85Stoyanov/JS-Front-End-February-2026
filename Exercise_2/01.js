@@ -39,15 +39,15 @@
 //     console.log(result.join(" "));
 // }
 
-
 function arrayRotation(array, numberOfRotations) {
-    const number = array.length;
-    numberOfRotations %= number;
+    const numberArray = array.length;
+    numberOfRotations %= numberArray;
 
     array.push(...array.splice(0, numberOfRotations));
     
     console.log(array.join(" "));
 }
+
 
 
 
