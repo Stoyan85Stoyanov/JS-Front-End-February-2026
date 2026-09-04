@@ -1,15 +1,27 @@
-function printEveryN_thElementFromAnArray(array, number) {
+// function printEveryN_thElementFromAnArray(array, number) {
 
+//     const result = [];
+
+//     array.forEach((element, index) => {
+//         if (index % number === 0) {
+//             result.push(element);
+//         }
+//     });
+
+//      return result;   
+// }
+
+function printEveryN_thElementFromAnArray(array, number) {
     const result = [];
 
-    array.forEach((element, index) => {
-        if (index % number === 0) {
-            result.push(element);
-        }
-    });
+    for (let i = 0; i < array.length; i += number) {
+        result.push(array[i]);
+    }
 
-     return result;   
+    return result;
 }
+
+
 
 // for(let i = 0; i < array.length; i += number) {
     //      result.push(array[i]);   
