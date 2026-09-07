@@ -14,7 +14,7 @@
 
 function listOfNames(arrayOfNames) {
 
-    arrayOfNames.sort();
+    arrayOfNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
     for (let i = 0; i < arrayOfNames.length; i++) {
         console.log((i + 1) + "." + arrayOfNames[i]);
