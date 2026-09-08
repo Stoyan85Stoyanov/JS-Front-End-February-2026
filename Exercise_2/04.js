@@ -67,6 +67,26 @@
 // }
 
 
+// function sortingNumbers(arrayOfNumbers) {  NOOOOOO!!!!!
+
+//     let result = arrayOfNumbers
+//         .sort((a, b) => b - a)
+//         .reduce((acc, number, index) => {
+
+//             if (index < arrayOfNumbers.length / 2) {
+//                 acc.push(arrayOfNumbers[arrayOfNumbers.length - 1 - index]);
+//                 acc.push(number);
+//             }
+
+//             return acc;
+//         }, []);
+
+//     console.log("[" + result.join(", ") + "]");
+
+//     return result;
+// }
+
+
 
 // function sortingNumbers(arrayOfNumbers) {
 
@@ -87,6 +107,29 @@
 
 //     return result;
 // }
+
+
+
+
+function sortingNumbers(arrayOfNumbers) {
+
+    let length = arrayOfNumbers.length;
+
+    let result = arrayOfNumbers
+        .sort((a, b) => b - a)
+        .slice(0, parseInt((length + 1) / 2))
+        .reduce((acc, number, index) => {
+            acc.push(arrayOfNumbers.pop());
+
+            if (index < parseInt(length / 2)) {
+                acc.push(number);
+            }
+
+            return acc;
+        }, []);
+
+    return result;
+}
 
 
 sortingNumbers([1, 65, 3, 52, 48, 63, 31, -3, 18]);
