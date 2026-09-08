@@ -6,15 +6,25 @@
 // }
 
 
-// function listOfNames(names) {
+// function listOfNames(names) {  !!!!! 
 //     names
 //         .sort((a, b) => a.localeCompare(b))
 //         .forEach((name, index) => console.log(`${index + 1}.${name}`));
 // }
 
+// function listOfNames(arrayOfNames) {
+
+//     arrayOfNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+//     for (let i = 0; i < arrayOfNames.length; i++) {
+//         console.log((i + 1) + "." + arrayOfNames[i]);
+//     }
+// }
+
+
 function listOfNames(arrayOfNames) {
 
-    arrayOfNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    arrayOfNames.sort((a, b) => a.localeCompare(b));
 
     for (let i = 0; i < arrayOfNames.length; i++) {
         console.log((i + 1) + "." + arrayOfNames[i]);
