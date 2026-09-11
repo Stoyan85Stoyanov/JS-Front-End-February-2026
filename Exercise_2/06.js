@@ -1,11 +1,23 @@
-function modernTimesOfHashTag(text) {
+// function modernTimesOfHashTag(text) {
 
-    const pattern = /#(?<tag>[a-zA-Z]+)\b/gm;
+//     const pattern = /#(?<tag>[a-zA-Z]+)\b/gm;
 
-    for (const match of text.matchAll(pattern)) {
+//     for (const match of text.matchAll(pattern)) {
 
-        let current = match.groups.tag;
-        console.log(current); 
+//         let current = match.groups.tag;
+//         console.log(current); 
+//     }
+// }
+
+
+function modernTimesOfHashTag(inputText) {
+
+    let pattern = /#([a-zA-Z]+)/g
+
+    const matches = inputText.matchAll(pattern);
+
+    for (const match of matches) {
+        console.log(match[1]);
     }
 }
 
