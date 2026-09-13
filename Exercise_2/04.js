@@ -115,7 +115,7 @@ function sortingNumbers(arrayOfNumbers) {
 
     let length = arrayOfNumbers.length;
 
-    let result = arrayOfNumbers
+    let results = arrayOfNumbers
         .sort((a, b) => b - a)
         .slice(0, parseInt((length + 1) / 2))
         .reduce((acc, number, index) => {
@@ -128,7 +128,7 @@ function sortingNumbers(arrayOfNumbers) {
             return acc;
         }, []);
 
-    return result;
+    return results;
 }
 
 
