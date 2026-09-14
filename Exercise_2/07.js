@@ -21,15 +21,28 @@
     //     console.log(`${word} not found!`);
     // }
 
+//     function stringSubstring(word, text) {
+
+//     if (text.toLowerCase().includes(word.toLowerCase())) {
+//         return console.log(word);
+
+//     } else {
+//         console.log(`${word} not found!`);
+//     }
+
+// }
+
+
     function stringSubstring(word, text) {
 
-    if (text.toLowerCase().includes(word.toLowerCase())) {
+        const pattern = new RegExp(word, 'i');
+
+    if (pattern.test(text)) {
         return console.log(word);
 
     } else {
         console.log(`${word} not found!`);
     }
-
 
 }
 
