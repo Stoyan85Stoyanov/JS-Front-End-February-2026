@@ -1,4 +1,4 @@
-function stringSubstring(word, text) {
+// function stringSubstring(word, text) {
 
     // const allWords = text.split(/[\s, .!?;: ]+/);
 
@@ -12,18 +12,28 @@ function stringSubstring(word, text) {
     // --------------------------------------------
 
 
-    const pattern = new RegExp(`\\b${word}\\b`, "i");
+    // const pattern = new RegExp(`\\b${word}\\b`, "i");
 
-    if (pattern.test(text)) {
-        console.log(word);
+    // if (pattern.test(text)) {
+    //     console.log(word);
+
+    // } else {
+    //     console.log(`${word} not found!`);
+    // }
+
+    function stringSubstring(word, text) {
+
+    if (text.toLowerCase().includes(word.toLowerCase())) {
+        return console.log(word);
 
     } else {
         console.log(`${word} not found!`);
     }
 
+
 }
 
-stringSubstring('java', 'JavaScript is the best programming language');
+stringSubstring('java', 'C# is the best programming language');
 stringSubstring('javascript', 'JavaScript is the best programming language');
 stringSubstring('python', 'JavaScript is the best programming language');
 
