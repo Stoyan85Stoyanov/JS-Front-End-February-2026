@@ -35,7 +35,7 @@
 
     function stringSubstring(word, text) {
 
-        const pattern = new RegExp(word, 'i');
+        const pattern = new RegExp(`\\b${word}\\b`, 'i');
 
     if (pattern.test(text)) {
         return console.log(word);
