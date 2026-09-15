@@ -1,38 +1,38 @@
 // function stringSubstring(word, text) {
 
-    // const allWords = text.split(/[\s, .!?;: ]+/);
+// const allWords = text.split(/[\s, .!?;: ]+/);
 
-    // if (allWords.find((i) => i.toLowerCase() === word.toLowerCase())) {
-    //     console.log(word);
+// if (allWords.find((i) => i.toLowerCase() === word.toLowerCase())) {
+//     console.log(word);
 
-    // }else{
-    //     console.log(`${word} not found!`);    
-    // }
+// }else{
+//     console.log(`${word} not found!`);    
+// }
 
-    // --------------------------------------------
+// --------------------------------------------
 
 
-    // const pattern = new RegExp(`\\b${word}\\b`, "i");
+// const pattern = new RegExp(`\\b${word}\\b`, "i");
 
-    // if (pattern.test(text)) {
-    //     console.log(word);
+// if (pattern.test(text)) {
+//     console.log(word);
 
-    // } else {
-    //     console.log(`${word} not found!`);
-    // }
+// } else {
+//     console.log(`${word} not found!`);
+// }
 
-    function stringSubstring(words, text) {
-
+function stringSubstring(word, text) {
+    
     const isIncluded = text
         .split(' ')
         .map(word => word.toLowerCase())
-        .includes(words);
+        .indexOf(word.toLowerCase());
 
-    if (isIncluded) {
-        console.log(words);
-        
+    if (isIncluded !== -1) {
+        console.log(word);
+
     } else {
-        console.log(`${words} not found!`);
+        console.log(`${word} not found!`);
     }
 
 }
