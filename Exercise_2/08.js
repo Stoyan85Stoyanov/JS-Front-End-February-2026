@@ -9,6 +9,18 @@
 // }
 
 
+function pascalCaseSplitter(singleString) {
+
+    const pattern = /[A-Z][a-z]*/g;
+
+    const result = Array.from(singleString.matchAll(pattern))
+        .map(match => match[0])
+        .join(', ');
+
+    console.log(result);
+}
+
+
 // function pascalCaseSplitter(singleString) {
 
 //     const pattern = /[A-Z][a-z]*/gm;
@@ -21,29 +33,54 @@
 
 
 
-function pascalCaseSplitter(singleString) {
+// function pascalCaseSplitter(singleString) {
 
-    let currentWord = singleString[0];
-    let words = [];
+//     let currentWord = singleString[0];
+//     let words = [];
 
-    for (let i = 1; i < singleString.length; i++) {
+//     for (let i = 1; i < singleString.length; i++) {
 
-        const currentCharacter = singleString[i];
+//         const currentCharacter = singleString[i];
 
-        if (currentCharacter === currentCharacter.toUpperCase()) {
-            words.push(currentWord);
-            currentWord = currentCharacter;
+//         if (currentCharacter === currentCharacter.toUpperCase()) {
+//             words.push(currentWord);
+//             currentWord = currentCharacter;
 
-        } else {
-            currentWord += currentCharacter;
-            continue;
-        }
-    }
+//         } else {
+//             currentWord += currentCharacter;
+//             continue;
+//         }
+//     }
 
-    words.push(currentWord);
+//     words.push(currentWord);
 
-    console.log(words.join(', '));
-}
+//     console.log(words.join(', '));
+// }
+
+
+// function pascalCaseSplitter(singleString) {
+
+//     let currentWord = singleString[0];
+//     let words = [];
+
+//     for (let i = 1; i < singleString.length; i++) {
+
+//         const currentCharacter = singleString[i];
+
+//         if (currentCharacter === currentCharacter.toUpperCase()) {
+//             words.push(currentWord);
+//             currentWord = currentCharacter;
+
+//         } else {
+//             currentWord += currentCharacter;
+//             continue;
+//         }
+//     }
+
+//     words.push(currentWord);
+
+//     console.log(words.join(', '));
+// }
 
 
 pascalCaseSplitter('SplitMeIfYouCanHaHaYouCantOrYouCan');
