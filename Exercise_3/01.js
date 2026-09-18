@@ -1,28 +1,49 @@
+// function smallestOfThreeNumbers(numberOne, numberTwo, numberThree) {
+
+//     //  console.log(Math.min(numberOne, numberTwo, numberThree));
+
+
+//     function findMin(array) {
+//         let min = Number.MAX_VALUE;
+
+//         for (const element of array) {
+
+//             if (element < min) {
+//                 min = element;
+//             }
+ 
+//         }
+//         return min;
+//     }
+
+//     let minNumber = [numberOne, numberTwo, numberThree];
+//     console.log(findMin(minNumber));  
+// }
+
+
+
 function smallestOfThreeNumbers(numberOne, numberTwo, numberThree) {
 
-    //  console.log(Math.min(numberOne, numberTwo, numberThree));
-
-
-    /** 
-     *  @param {Array} array
-     */
 
     function findMin(array) {
-        let min = Number.MAX_VALUE;
+        let smallestNumber = Number.MAX_SAFE_INTEGER;
 
         for (const element of array) {
 
-            if (element < min) {
-                min = element;
+            if (element < smallestNumber) {
+                smallestNumber = element;
             }
  
         }
-        return min;
+        return smallestNumber;
     }
 
     let minNumber = [numberOne, numberTwo, numberThree];
     console.log(findMin(minNumber));  
 }
+
+
+
 
 smallestOfThreeNumbers(2, 5, 3);
 smallestOfThreeNumbers(600, 342, 123);
