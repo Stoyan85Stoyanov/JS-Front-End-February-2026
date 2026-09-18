@@ -13,9 +13,7 @@ function pascalCaseSplitter(singleString) {
 
     const pattern = /[A-Z][a-z]*/g;
 
-    const result = Array.from(singleString.matchAll(pattern))
-        .map(match => match[0])
-        .join(', ');
+    const result = Array.from(singleString.matchAll(pattern)).join(', ');
 
     console.log(result);
 }
