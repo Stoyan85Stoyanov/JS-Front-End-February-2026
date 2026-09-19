@@ -25,7 +25,7 @@
 function smallestOfThreeNumbers(numberOne, numberTwo, numberThree) {
 
 
-    function findMin(array) {
+    function findMinNumber(array) {
         let smallestNumber = Number.MAX_SAFE_INTEGER;
 
         for (const element of array) {
@@ -39,7 +39,7 @@ function smallestOfThreeNumbers(numberOne, numberTwo, numberThree) {
     }
 
     let minNumber = [numberOne, numberTwo, numberThree];
-    console.log(findMin(minNumber));  
+    console.log(findMinNumber(minNumber));  
 }
 
 
