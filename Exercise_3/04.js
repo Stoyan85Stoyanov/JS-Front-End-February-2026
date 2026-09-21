@@ -1,37 +1,101 @@
+// function oddAndEvenSum(singleNumber) {
+
+//     function getDigits(singleNumber) {
+
+//         let result = [];
+
+//         do {
+//             let digit = singleNumber % 10;
+//             result.push(digit);
+
+//             singleNumber = (singleNumber - digit) / 10;
+
+//         } while (singleNumber !== 0);
+//             result.reverse();
+
+//         return result;
+//     }
+
+//     let digits = getDigits(singleNumber);
+
+//     let evenSum = 0;
+//     let oddSum = 0;
+
+//     for (const element of digits) {
+
+//         if (element % 2 === 0) {
+//             evenSum += element;
+
+//         } else {
+//             oddSum += element;
+//         }
+
+//     }
+//     console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
+// }
+
+
+
 function oddAndEvenSum(singleNumber) {
 
-    function getDigits(singleNumber) {
+    const digits = getDigits(singleNumber);
 
-        let result = [];
+    const evenDigits = filterEvenNumbers(digits);
+    const oddDigits = filterOddNumbers(digits);
 
-        do {
-            let digit = singleNumber % 10;
-            result.push(digit);
+    const evenSum = sumNumbers(evenDigits);
+    const oddSum = sumNumbers(oddDigits);
 
-            singleNumber = (singleNumber - digit) / 10;
+    console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
 
-        } while (singleNumber !== 0);
-            result.reverse();
+
+    function getDigits(number) {
+        
+        const result = number
+            .toString()
+            .split('')
+            .map(Number);
 
         return result;
     }
 
-    let digits = getDigits(singleNumber);
 
-    let evenSum = 0;
-    let oddSum = 0;
+    function filterEvenNumbers(numbers) {
+        const result = [];
 
-    for (const element of digits) {
-
-        if (element % 2 === 0) {
-            evenSum += element;
-
-        } else {
-            oddSum += element;
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 === 0) {
+                result.push(numbers[i]);
+            }
         }
 
+        return result;
     }
-    console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
+
+
+    function filterOddNumbers(numbers) {
+        const result = [];
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 !== 0) {
+                result.push(numbers[i]);
+            }
+        }
+
+        return result;
+    }
+
+
+    function sumNumbers(numbers) {
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            sum = sum + numbers[i];
+        }
+
+        return sum;
+    }
+
 }
 
 oddAndEvenSum(1000435);
