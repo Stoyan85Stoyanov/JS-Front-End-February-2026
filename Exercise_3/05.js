@@ -1,40 +1,67 @@
+// function palindromeIntegers(numbers) {
+
+//     function getDigits(numbers) {
+
+//         let result = [];
+
+//         do {
+//             let digit = numbers % 10;
+//             result.push(digit);
+
+//             numbers = (numbers - digit) / 10;
+
+//         } while (numbers !== 0);
+//             result.reverse();
+
+//         return result;
+//     }
+
+//     function palindrome(numbers) {
+
+//         let digits = getDigits(numbers);
+
+//         for (let i = 0; i < digits.length / 2; i++) {
+
+//             if (digits[i] !== digits[digits.length - (i + 1)]) {
+//                 return false;
+//             }
+
+//            return true;
+//         } 
+//     }
+
+//         for (const element of numbers) {
+//         console.log(palindrome(element));
+//     } 
+
+// }
+
 function palindromeIntegers(numbers) {
 
-    function getDigits(numbers) {
+    for (const positiveIntegers of numbers) {
+        const palindrome = checkPalindrome(positiveIntegers);
 
-        let result = [];
-
-        do {
-            let digit = numbers % 10;
-            result.push(digit);
-
-            numbers = (numbers - digit) / 10;
-
-        } while (numbers !== 0);
-            result.reverse();
-
-        return result;
+        console.log(palindrome);
     }
 
-    function palindrome(numbers) {
 
-        let digits = getDigits(numbers);
+    function checkPalindrome(number) {
+
+        const digits = number.toString();
 
         for (let i = 0; i < digits.length / 2; i++) {
 
-            if (digits[i] !== digits[digits.length - (i + 1)]) {
-                return false;
+            if (digits[i] === digits[digits.length - (i + 1)]) {
+                return true;
             }
 
-           return true;
-        } 
+            return false;
+        }
     }
-
-        for (const element of numbers) {
-        console.log(palindrome(element));
-    } 
-
 }
 
-palindromeIntegers([123,323,421,121]);
-palindromeIntegers([32,2,232,1010]);
+palindromeIntegers([123, 323, 421, 121]);
+console.log();
+palindromeIntegers([32, 2, 232, 1010]);
+
+
