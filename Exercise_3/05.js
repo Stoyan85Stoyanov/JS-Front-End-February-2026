@@ -47,7 +47,7 @@ function palindromeIntegers(numbers) {
 
     function checkPalindrome(number) {
 
-        const digits = number.toString();
+        const digits = `${number}`;
 
         for (let i = 0; i < digits.length / 2; i++) {
 
