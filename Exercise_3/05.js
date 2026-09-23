@@ -36,6 +36,34 @@
 
 // }
 
+
+
+// function palindromeIntegers(numbers) {
+
+//     for (const positiveIntegers of numbers) {
+//         const palindrome = checkPalindrome(positiveIntegers);
+
+//         console.log(palindrome);
+//     }
+
+
+//     function checkPalindrome(number) {
+
+//         const digits = `${number}`;
+
+//         for (let i = 0; i < digits.length / 2; i++) {
+
+//             if (digits[i] === digits[digits.length - (i + 1)]) {
+//                 return true;
+//             }
+
+//             return false;
+//         }
+//     }
+// }
+
+
+
 function palindromeIntegers(numbers) {
 
     for (const positiveIntegers of numbers) {
@@ -45,19 +73,24 @@ function palindromeIntegers(numbers) {
     }
 
 
-    function checkPalindrome(number) {
+    function checkPalindrome(positiveIntegers) {
 
-        const digits = `${number}`;
+        // const number = positiveIntegers.toString();
 
-        for (let i = 0; i < digits.length / 2; i++) {
+        const number = `${positiveIntegers}`;
 
-            if (digits[i] === digits[digits.length - (i + 1)]) {
-                return true;
-            }
+        const reversePositiveIntegers = number
+            .split('')
+            .reverse()
+            .join('');
 
+        if (number !== reversePositiveIntegers) {
             return false;
         }
+
+        return true;
     }
+
 }
 
 palindromeIntegers([123, 323, 421, 121]);
