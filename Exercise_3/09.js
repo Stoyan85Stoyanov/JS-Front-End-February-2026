@@ -42,12 +42,12 @@ function loadingBar(numberPercentage) {
 
 
     if (numberPercentage === 100) {
-        console.log(`${numberPercentage}% Complete!`);
-        console.log(progressBar);
+        console.log(`${numberPercentage}% Complete!` + '\n' + progressBar);
+        // console.log(progressBar);
 
     } else {
-        console.log(`${numberPercentage}% ${progressBar}`);
-        console.log("Still loading...");
+        console.log(`${numberPercentage}% ${progressBar}` + '\n' + "Still loading...");
+        // console.log("Still loading...");
     }
 }
 
