@@ -1,23 +1,45 @@
+// function towns(arrayOfStrings) {
+
+//     const towns = [];
+
+//     for (const row of arrayOfStrings) {
+
+//         let valuesRow = row.split(" | ");
+//         const objectTown = {
+//             town: valuesRow[0],
+//             latitude: Number(valuesRow[1]).toFixed(2),
+//             longitude: Number(valuesRow[2]).toFixed(2)
+//         };
+
+//         towns.push(objectTown);
+//     }
+
+//     for (const objectTown of towns) {
+//         console.log(objectTown);
+
+//     }
+// }
+
+
 function towns(arrayOfStrings) {
 
-    const towns = [];
+    arrayOfStrings.map(infoTowns).forEach(printTowns);
 
-    for (const row of arrayOfStrings) {
-
-        let valuesRow = row.split(" | ");
+    function infoTowns(town) {
         const objectTown = {
-            town: valuesRow[0],
-            latitude: Number(valuesRow[1]).toFixed(2),
-            longitude: Number(valuesRow[2]).toFixed(2)
-        };
+            town: town.split(" | ")[0],
+            latitude: Number(town.split(" | ")[1]).toFixed(2),
+            longitude: Number(town.split(" | ")[2]).toFixed(2)
+        }
 
-        towns.push(objectTown);
+        return objectTown;
+
     }
 
-    for (const objectTown of towns) {
+    function printTowns(objectTown) {
         console.log(objectTown);
-
     }
+
 }
 
 
