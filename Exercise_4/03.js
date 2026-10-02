@@ -30,6 +30,7 @@
 
 
 function storeProvision(arrayFirst, arraySecond) {
+
     const stock = {};
 
     addProducts(stock, arrayFirst);
@@ -39,6 +40,7 @@ function storeProvision(arrayFirst, arraySecond) {
 
 
     function addProducts(stock, products) {
+        
         for (let i = 0; i < products.length; i += 2) {
             const name = products[i];
             const quantity = Number(products[i + 1]);
