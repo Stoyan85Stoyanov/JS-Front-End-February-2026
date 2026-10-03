@@ -26,6 +26,7 @@ function towns(arrayOfStrings) {
     arrayOfStrings.map(infoTowns).forEach(printTowns);
 
     function infoTowns(town) {
+        
         const objectTown = {
             town: town.split(" | ")[0],
             latitude: Number(town.split(" | ")[1]).toFixed(2),
