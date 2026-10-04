@@ -29,37 +29,79 @@
 
 
 
+// function storeProvision(arrayFirst, arraySecond) {
+
+//     const stock = {};
+
+//     addProducts(stock, arrayFirst);
+//     addProducts(stock, arraySecond);
+
+//     printStock(stock);
+
+
+//     function addProducts(stock, products) {
+        
+//         for (let i = 0; i < products.length; i += 2) {
+//             const name = products[i];
+//             const quantity = Number(products[i + 1]);
+
+//             if (!(name in stock)) {
+//                 stock[name] = 0;
+//             }
+
+//             stock[name] += quantity;
+//         }
+//     }
+
+//     function printStock(stock) {
+//         for (const productName in stock) {
+//             console.log(`${productName} -> ${stock[productName]}`);
+//         }
+//     }
+
+// }
+
+
+
+
 function storeProvision(arrayFirst, arraySecond) {
 
-    const stock = {};
+    let products = [];
+    let quantities = [];
 
-    addProducts(stock, arrayFirst);
-    addProducts(stock, arraySecond);
+    addProducts(arrayFirst);
+    addProducts(arraySecond);
 
-    printStock(stock);
+    printStock();
 
+    function addProducts(productsArray) {
 
-    function addProducts(stock, products) {
-        
-        for (let i = 0; i < products.length; i += 2) {
-            const name = products[i];
-            const quantity = Number(products[i + 1]);
+        for (let i = 0; i < productsArray.length; i += 2) {
 
-            if (!(name in stock)) {
-                stock[name] = 0;
+            const productName = productsArray[i];
+            const quantity = Number(productsArray[i + 1]);
+
+            const productIndex = products.indexOf(productName);
+
+            if (productIndex === -1) {
+                products.push(productName);
+                quantities.push(quantity);
+                
+            } else {
+                quantities[productIndex] += quantity;
             }
-
-            stock[name] += quantity;
         }
     }
 
-    function printStock(stock) {
-        for (const productName in stock) {
-            console.log(`${productName} -> ${stock[productName]}`);
+    function printStock() {
+
+        for (let i = 0; i < products.length; i++) {
+            console.log(`${products[i]} -> ${quantities[i]}`);
         }
     }
-
 }
+
+
 
 
 storeProvision([
