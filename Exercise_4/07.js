@@ -1,6 +1,29 @@
+// function oddOccurrences(singleString) {
+
+//     let words = singleString.toLowerCase().split(' ');
+
+//     const map = {};
+
+//     for (const word of words) {
+
+//         if (!map.hasOwnProperty(word)) {
+//             map[word] = 0;
+//         }
+
+//         map[word]++;
+
+//     }
+
+//     let resultWords = words.filter((x, i) => map[x] % 2 !== 0 && words.indexOf(x) === i);
+//     console.log(resultWords.join(" "));
+
+// }
+
+
+
 function oddOccurrences(singleString) {
 
-    let words = singleString.toLowerCase().split(' ');
+    const words = singleString.toLowerCase().split(' ');
 
     const map = {};
 
@@ -9,13 +32,17 @@ function oddOccurrences(singleString) {
         if (!map.hasOwnProperty(word)) {
             map[word] = 0;
         }
-        
-        map[word]++;
 
+        map[word]++;
     }
 
-    let resultWords = words.filter((x, i) => map[x] % 2 !== 0 && words.indexOf(x) === i);
-    console.log(resultWords.join(" "));
+
+    const result = Object.entries(map)
+        .filter(word => word[1] % 2 !== 0)
+        .sort((x, y) => y[1] - x[1])
+        .map(word => word[0]);
+
+    console.log(result.join(' '));
 
 }
 
