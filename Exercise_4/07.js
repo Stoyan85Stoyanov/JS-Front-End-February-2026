@@ -25,19 +25,19 @@ function oddOccurrences(singleString) {
 
     const words = singleString.toLowerCase().split(' ');
 
-    const map = {};
+    const mapWords = {};
 
     for (const word of words) {
 
-        if (!map.hasOwnProperty(word)) {
-            map[word] = 0;
+        if (!mapWords.hasOwnProperty(word)) {
+            mapWords[word] = 0;
         }
 
-        map[word]++;
+        mapWords[word]++;
     }
 
 
-    const result = Object.entries(map)
+    const result = Object.entries(mapWords)
         .filter(word => word[1] % 2 !== 0)
         .sort((x, y) => y[1] - x[1])
         .map(word => word[0]);
