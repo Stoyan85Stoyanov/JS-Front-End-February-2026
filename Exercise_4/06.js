@@ -28,25 +28,29 @@ function wordsTracker(arrayOfWords) {
     const mapWords = {};
 
     arrayOfWords[0].split(' ')
-    .forEach((element) => { mapWords[element] = 0; });
+        .forEach((element) => { mapWords[element] = 0; });
 
-    
+
     for (const word of arrayOfWords.slice(1)) {
         if (mapWords.hasOwnProperty(word)) {
             mapWords[word]++;
         }
     }
 
-    
+
     const wordEntires = Object
         .entries(mapWords)
         .sort((a, b) => b[1] - a[1])
 
     const sortedSearchWords = Object.fromEntries(wordEntires);
 
-    
-    Object.keys(sortedSearchWords)
-        .forEach(word => console.log(`${word} - ${sortedSearchWords[word]}`))
+
+    // Object.keys(sortedSearchWords)
+    //     .forEach(word => console.log(`${word} - ${sortedSearchWords[word]}`))
+
+    Object.entries(sortedSearchWords).forEach(([word, count]) =>
+        console.log(`${word} - ${count}`)
+    );
 }
 
 
