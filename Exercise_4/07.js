@@ -36,14 +36,16 @@ function oddOccurrences(singleString) {
         mapWords[word]++;
     }
 
-
+  
     const result = Object.entries(mapWords)
-        .filter(word => word[1] % 2 !== 0)
+    // .filter(word => word[1] % 2 !== 0)
+        .filter(word => word[1] % 2)
         .sort((x, y) => y[1] - x[1])
-        .map(word => word[0]);
+        .map(word => word[0])
+        .join(' ');
 
-    console.log(result.join(' '));
 
+    console.log(result);
 }
 
 oddOccurrences('Java C# Php PHP Java PhP 3 C# 3 1 5 C#');
