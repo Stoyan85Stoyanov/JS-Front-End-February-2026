@@ -1,8 +1,8 @@
-function movies(input) {
+function movies(inputMovies) {
 
     const movies = [];
 
-    for (let line of input) {
+    for (let line of inputMovies) {
 
         if (line.startsWith("addMovie ")) {
             const name = line.replace("addMovie ", "");
