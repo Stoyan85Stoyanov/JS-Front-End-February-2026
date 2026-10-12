@@ -1,57 +1,123 @@
+// function movies(inputMovies) {
+
+//     const movies = [];
+
+//     for (let line of inputMovies) {
+
+//         if (line.startsWith("addMovie ")) {
+//             const name = line.replace("addMovie ", "");
+//             movies.push({ name });
+
+//         } else if (line.includes(" directedBy ")) {
+//             const [name, director] = line.split(" directedBy ");
+//             const movie = movies.find(m => m.name === name);
+
+//             if (movie) {
+//                 movie.director = director;
+//             }
+
+//         } else if (line.includes(" onDate ")) {
+//             const [name, date] = line.split(" onDate ");
+//             const movie = movies.find(m => m.name === name);
+
+//             if (movie) {
+//                 movie.date = date;
+//             }
+//         }
+//     }
+
+//     movies
+//         .filter(m => m.name && m.director && m.date)
+//         .forEach(m => console.log(JSON.stringify(m)));
+
+// }
+
+
+
 function movies(inputMovies) {
 
     const movies = [];
 
-    for (let line of inputMovies) {
+    const executeCommand = {
+        addMovie,
+        directedBy: addDirector,
+        onDate: addDate,
+    };
 
-        if (line.startsWith("addMovie ")) {
-            const name = line.replace("addMovie ", "");
-            movies.push({ name });
+    inputMovies.forEach(m => {
+        const command = getCommand(m);
+        executeCommand[command](m);
 
-        } else if (line.includes(" directedBy ")) {
-            const [name, director] = line.split(" directedBy ");
-            const movie = movies.find(m => m.name === name);
+    });
 
-            if (movie) {
-                movie.director = director;
-            }
+    printMovies(movies);
 
-        } else if (line.includes(" onDate ")) {
-            const [name, date] = line.split(" onDate ");
-            const movie = movies.find(m => m.name === name);
 
-            if (movie) {
-                movie.date = date;
-            }
+    function getCommand(inputMovies) {
+        const commands = ['addMovie', 'directedBy', 'onDate'];
+        const command = commands.find(command => inputMovies.includes(command));
+
+        return command;
+    }
+
+
+    function addMovie(inputMovies) {
+        const [_, movieName] = inputMovies.split('addMovie ');
+        const movie_ = { name: movieName };
+        movies.push(movie_);
+    }
+
+
+    function addDirector(inputMovies) {
+        const [name, director] = inputMovies.split(' directedBy ');
+        const movie = movies.find(movie => movie.name === name);
+
+        if (movie) {
+            movie.director = director;
         }
     }
 
-    movies
-        .filter(m => m.name && m.director && m.date)
-        .forEach(m => console.log(JSON.stringify(m)));
+
+    function addDate(inputMovies) {
+        const [name, date] = inputMovies.split(' onDate ');
+        const movie = movies.find(movie => movie.name === name);
+
+        if (movie) {
+            movie.date = date;
+
+        }
+    }
+
+
+    function printMovies(movies) {
+        movies
+            .filter(movie => movie.name && movie.director && movie.date)
+            .forEach(movie => console.log(JSON.stringify(movie)));
+    }
 
 }
 
+
 movies([
-'addMovie Fast and Furious',
-'addMovie Godfather',
-'Inception directedBy Christopher Nolan',
-'Godfather directedBy Francis Ford Coppola',
-'Godfather onDate 29.07.2018',
-'Fast and Furious onDate 30.07.2018',
-'Batman onDate 01.08.2018',
-'Fast and Furious directedBy Rob Cohen'
+    'addMovie Fast and Furious',
+    'addMovie Godfather',
+    'Inception directedBy Christopher Nolan',
+    'Godfather directedBy Francis Ford Coppola',
+    'Godfather onDate 29.07.2018',
+    'Fast and Furious onDate 30.07.2018',
+    'Batman onDate 01.08.2018',
+    'Fast and Furious directedBy Rob Cohen'
 ]
 );
 
 
 movies([
-'addMovie The Avengers',
-'addMovie Superman',
-'The Avengers directedBy Anthony Russo',
-'The Avengers onDate 30.07.2010',
-'Captain America onDate 30.07.2010',
-'Captain America directedBy Joe Russo'
+    'addMovie The Avengers',
+    'addMovie Superman',
+    'The Avengers directedBy Anthony Russo',
+    'The Avengers onDate 30.07.2010',
+    'Captain America onDate 30.07.2010',
+    'Captain America directedBy Joe Russo'
 ]
 );
 
