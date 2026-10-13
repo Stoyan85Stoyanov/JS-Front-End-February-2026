@@ -44,9 +44,15 @@ function movies(inputMovies) {
         onDate: addDate,
     };
 
-    inputMovies.forEach(m => {
-        const command = getCommand(m);
-        executeCommand[command](m);
+    inputMovies.forEach(input => {
+        // const command = getCommand(input);
+        // executeCommand[command] (input);
+
+        const command = getCommand(input);
+
+        if (typeof executeCommand[command] === 'function') {
+            executeCommand[command](input);
+        }
 
     });
 
@@ -74,7 +80,7 @@ function movies(inputMovies) {
 
         if (movie) {
             movie.director = director;
-        } 
+        }
     }
 
 
@@ -84,7 +90,7 @@ function movies(inputMovies) {
 
         if (movie) {
             movie.date = date;
-        } 
+        }
     }
 
 
