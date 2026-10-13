@@ -46,7 +46,7 @@ function movies(inputMovies) {
 
     inputMovies.forEach(m => {
         const command = getCommand(m);
-        executeCommand[command] (m);
+        executeCommand[command](m);
 
     });
 
