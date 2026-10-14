@@ -38,23 +38,44 @@ function movies(inputMovies) {
 
     const movies = [];
 
-    const executeCommand = {
-        addMovie,
-        directedBy: addDirector,
-        onDate: addDate,
-    };
+    // const executeCommand = {
+    //     addMovie,
+    //     directedBy: addDirector,
+    //     onDate: addDate,
+    // };
 
-    inputMovies.forEach(input => {
-        // const command = getCommand(input);
-        // executeCommand[command] (input);
+    // inputMovies.forEach(input => {
+    //     // const command = getCommand(input);
+    //     // executeCommand[command] (input);
 
+    //     const command = getCommand(input);
+
+    //     if (typeof executeCommand[command] === 'function') {
+    //         executeCommand[command](input);
+    //     }
+
+    // });
+
+
+    for (const input of inputMovies) {
         const command = getCommand(input);
 
-        if (typeof executeCommand[command] === 'function') {
-            executeCommand[command](input);
-        }
+        switch (command) {
 
-    });
+            case 'addMovie':
+                addMovie(input);
+                break;
+
+            case 'directedBy':
+                addDirector(input);
+                break;
+                
+            case 'onDate':
+                addDate(input);
+                break;
+        }
+    }
+
 
     printMovies(movies);
 
