@@ -1,23 +1,41 @@
+// function make_A_Dictionary(inputString) {
+
+//     let input = {};
+
+//     for (const element of inputString) {
+//         let object = JSON.parse(element);
+
+//         for (const key in object) {
+//             input[key] = object[key];
+//         }
+//     }
+
+//     for (const string of Object.keys(input).sort()) {
+//         let description = input[string];
+//         console.log(`Term: ${string} => Definition: ${description}`);
+        
+//     }
+
+// }
+
+
 function make_A_Dictionary(inputString) {
 
-    let input = {};
+    const input = {};
 
     for (const element of inputString) {
-        let object = JSON.parse(element);
+        const object = JSON.parse(element);
 
         for (const key in object) {
             input[key] = object[key];
         }
     }
 
-    for (const string of Object.keys(input).sort()) {
-        let description = input[string];
-        console.log(`Term: ${string} => Definition: ${description}`);
-        
-    }
+      Object.entries(input)
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .forEach(entry => console.log(`Term: ${entry[0]} => Definition: ${entry[1]}`));
 
 }
-
 
 make_A_Dictionary([
     '{"Coffee":"A hot drink made from the roasted and ground seeds (coffee beans) of a tropical shrub."}',
