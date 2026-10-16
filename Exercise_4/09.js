@@ -32,7 +32,7 @@ function make_A_Dictionary(inputString) {
     }
 
       Object.entries(input)
-        .sort((a, b) => a[0].localeCompare(b[0]))
+        .sort((x, y) => x[0].localeCompare(y[0]))
         .forEach(entry => console.log(`Term: ${entry[0]} => Definition: ${entry[1]}`));
 
 }
