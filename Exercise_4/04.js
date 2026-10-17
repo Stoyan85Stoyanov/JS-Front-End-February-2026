@@ -34,9 +34,9 @@
 
 
 
-function movies(inputMovies) {
+// function movies(inputMovies) {
 
-    const movies = [];
+//     const movies = [];
 
     // const executeCommand = {
     //     addMovie,
@@ -56,6 +56,10 @@ function movies(inputMovies) {
 
     // });
 
+
+    function movies(inputMovies) {
+
+    const movies = [];
 
     for (const input of inputMovies) {
         const command = getCommand(input);
