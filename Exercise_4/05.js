@@ -46,11 +46,10 @@
 
 function inventory(arrayOfStrings) {
 
-    arrayOfStrings
-        .map(createHero)
-        .sort(compareHeroes)
-        .forEach(printHero);
-        
+    const heroes = arrayOfStrings.map(createHero);
+
+    sortHeroes(heroes);
+    heroes.forEach(printHero);
 
 
     function createHero(heroes) {
@@ -67,10 +66,8 @@ function inventory(arrayOfStrings) {
     }
 
 
-    function compareHeroes(firstHero, secondHero) {
-
-        const result = firstHero.level - secondHero.level;
-        return result;
+    function sortHeroes(heroes) {
+        return heroes.sort((a, b) => a.level - b.level);
     }
 
 
