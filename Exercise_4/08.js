@@ -33,30 +33,44 @@
 
 function piccolo(inputString) {
 
-    let parking = [];
+    // let parking = [];
 
-    for (const element of inputString) {
-        const [direction, carNumber] = element.split(', ');
+    // for (const element of inputString) {
+    //     const [direction, carNumber] = element.split(', ');
 
-        if (direction === "IN") {
-            parking = parking.filter((x) => x !== carNumber);
-            parking.push(carNumber);
+    //     if (direction === "IN") {
+    //         parking = parking.filter((x) => x !== carNumber);
+    //         parking.push(carNumber);
 
-        } else if (direction === "OUT") {
-            parking = parking.filter((x) => x !== carNumber);
+    //     } else if (direction === "OUT") {
+    //         parking = parking.filter((x) => x !== carNumber);
 
-        }
-    }
+    //     }
+    // }
 
-    const sortedParking = parking.sort((a, b) => a.localeCompare(b));
+    // const sortedParking = parking.sort((a, b) => a.localeCompare(b));
 
-    if (sortedParking.length === 0) {
-        console.log('Parking Lot is Empty');
-    }
+    // if (sortedParking.length === 0) {
+    //     console.log('Parking Lot is Empty');
+    // }
 
-    for (const car of sortedParking) {
-        console.log(car);
-    }
+    // for (const car of sortedParking) {
+    //     console.log(car);
+    // }
+
+
+    const parking = inputString
+        .map(row => row.split(', '))
+        .reduce((acc, [direction, number]) => ({ ...acc, [number]: direction === 'IN' }), {})
+
+
+    const sortedParking = Object.entries(parking)
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .filter(([_, isActive]) => isActive);
+
+    sortedParking.length === 0 && console.log('Parking Lot is Empty');
+    sortedParking.forEach(([number]) => console.log(number));
+
 
 }
 
