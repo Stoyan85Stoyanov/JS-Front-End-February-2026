@@ -31,33 +31,35 @@
 
 
 
+// function piccolo(inputString) {
+
+// let parking = [];
+
+// for (const element of inputString) {
+//     const [direction, carNumber] = element.split(', ');
+
+//     if (direction === "IN") {
+//         parking = parking.filter((x) => x !== carNumber);
+//         parking.push(carNumber);
+
+//     } else if (direction === "OUT") {
+//         parking = parking.filter((x) => x !== carNumber);
+
+//     }
+// }
+
+// const sortedParking = parking.sort((a, b) => a.localeCompare(b));
+
+// if (sortedParking.length === 0) {
+//     console.log('Parking Lot is Empty');
+// }
+
+// for (const car of sortedParking) {
+//     console.log(car);
+// }
+
+
 function piccolo(inputString) {
-
-    // let parking = [];
-
-    // for (const element of inputString) {
-    //     const [direction, carNumber] = element.split(', ');
-
-    //     if (direction === "IN") {
-    //         parking = parking.filter((x) => x !== carNumber);
-    //         parking.push(carNumber);
-
-    //     } else if (direction === "OUT") {
-    //         parking = parking.filter((x) => x !== carNumber);
-
-    //     }
-    // }
-
-    // const sortedParking = parking.sort((a, b) => a.localeCompare(b));
-
-    // if (sortedParking.length === 0) {
-    //     console.log('Parking Lot is Empty');
-    // }
-
-    // for (const car of sortedParking) {
-    //     console.log(car);
-    // }
-
 
     const parking = inputString
         .map(row => row.split(', '))
