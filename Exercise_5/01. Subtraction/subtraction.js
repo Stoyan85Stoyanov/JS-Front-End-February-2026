@@ -7,10 +7,11 @@ function subtract() {
     const firstNumber = Number(firstInput.value);
     const secondNumber = Number(secondInput.value);
 
-    let result = firstNumber - secondNumber;
-    let resultNumber = document.getElementById('result');
+    const result = firstNumber - secondNumber;
+    const resultNumber = document.getElementById('result');
 
     // запазване на числовата стойност от result в resultNumber
     // resultNumber.textContent = result.toString( );
-    resultNumber.innerText = result.toString( );
+    // resultNumber.innerText = result.toString( );
+    resultNumber.textContent = result;
 }
