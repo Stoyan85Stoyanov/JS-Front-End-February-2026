@@ -44,15 +44,16 @@ function solve() {
   function transform(words, namingConvention) {
 
     if (namingConvention === "Camel Case") {
-      return words.map((x, y) => (y === 0 ? x.toLowerCase() : capitalize(x))).join("");
+      const result = words.map((x, y) => (y === 0 ? x.toLowerCase() : capitalize(x))).join("");
+      return result;
+
+    } else if (namingConvention === "Pascal Case") {
+      const result = words.map((x) => capitalize(x)).join("");
+      return result;
+
+    } else {
+      return "Error!";
     }
-
-    if (namingConvention === "Pascal Case") {
-      return words.map((x) => capitalize(x)).join("");
-
-    }
-
-    return "Error!";
 
   }
 
