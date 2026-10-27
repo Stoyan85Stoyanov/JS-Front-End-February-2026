@@ -1,9 +1,10 @@
 function solve() {
 
-   const listItems = Array.from(document.querySelectorAll("ul#towns > li"));
-   const inputElement = document.getElementById("searchText");
+   // const listItems = Array.from(document.querySelectorAll("ul#towns > li"));
+   const listItems = document.querySelectorAll('#towns li');
+   const inputElement = document.getElementById('searchText');
    const searchQuery = inputElement.value;
-   const resultContainer = document.getElementById("result");
+   const resultContainer = document.getElementById('result');
 
 
    let matchCountResult = 0;
@@ -11,16 +12,19 @@ function solve() {
    for (const item of listItems) {
 
       if (item.innerText.includes(searchQuery)) {
-         item.style.fontWeight = "bold";
-         item.style.textDecoration = "underline";
+         item.style.fontWeight = 'bold';
+         item.style.textDecoration = 'underline';
          matchCountResult++;
 
-      } else {
-         item.style = null;
       }
+
+      // } else {
+      //    item.style = null;
+      // }
 
    }
 
-   resultContainer.innerText = `${matchCountResult} matches found`;
+   // resultContainer.innerText = `${matchCountResult} matches found`;
+   resultContainer.textContent = `${matchCountResult} matches found`;
 
 }
