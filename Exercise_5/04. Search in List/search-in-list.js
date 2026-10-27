@@ -2,7 +2,8 @@ function solve() {
 
    // const listItems = Array.from(document.querySelectorAll("ul#towns > li"));
    const listItems = document.querySelectorAll('#towns li');
-   const inputElement = document.getElementById('searchText');
+   // const inputElement = document.getElementById('searchText');
+   const inputElement = document.querySelector('#searchText');
    const searchQuery = inputElement.value;
    const resultContainer = document.getElementById('result');
 
