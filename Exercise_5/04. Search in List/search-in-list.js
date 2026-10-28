@@ -8,14 +8,14 @@ function solve() {
    const resultContainer = document.getElementById('result');
 
 
-   let matchCountResult = 0;
+   let matchCount = 0;
 
    for (const item of listItems) {
 
       if (item.innerText.includes(searchQuery)) {
          item.style.fontWeight = 'bold';
          item.style.textDecoration = 'underline';
-         matchCountResult++;
+         matchCount++;
 
       }
 
@@ -26,6 +26,6 @@ function solve() {
    }
 
    // resultContainer.innerText = `${matchCountResult} matches found`;
-   resultContainer.textContent = `${matchCountResult} matches found`;
+   resultContainer.textContent = `${matchCount} matches found`;
 
 }
