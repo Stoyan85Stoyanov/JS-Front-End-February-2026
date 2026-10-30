@@ -57,5 +57,5 @@ function solve() {
    }
 
   
-   searchInput.value = "";
+   searchInput.value = '';
 }
