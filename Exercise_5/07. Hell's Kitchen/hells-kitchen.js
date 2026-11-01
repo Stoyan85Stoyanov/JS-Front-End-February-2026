@@ -71,11 +71,12 @@ function solve() {
     const inputElement = document.querySelector("textarea");
     const bestRestaurantOutput = document.querySelector("div#bestRestaurant > p");
     const workersOutput = document.querySelector("div#workers > p");
+    const data = JSON.parse(inputElement.value);
 
     const restaurants = {};
 
    
-    for (const entry of JSON.parse(inputElement.value)) {
+    for (const entry of data) {
         const [name, workersData] = entry.split(" - ");
 
         if (!restaurants.hasOwnProperty(name)) restaurants[name] = { workers: [] };
