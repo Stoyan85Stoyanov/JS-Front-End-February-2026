@@ -75,11 +75,13 @@ function solve() {
 
     const restaurants = {};
 
-   
+
     for (const entry of data) {
         const [name, workersData] = entry.split(" - ");
 
-        if (!restaurants.hasOwnProperty(name)) restaurants[name] = { workers: [] };
+        if (!restaurants.hasOwnProperty(name)) {
+            restaurants[name] = { workers: [] };
+        }
 
         for (const pair of workersData.split(", ")) {
             const [worker, salary] = pair.split(" ");
@@ -104,7 +106,7 @@ function solve() {
         restaurants[restaurant].maxSalary = maxSalary;
     }
 
-  
+
     let bestRestaurant = null;
 
     for (const current in restaurants) {
@@ -114,13 +116,19 @@ function solve() {
     }
 
 
-      if (bestRestaurant == null) {  
-          bestRestaurantOutput.textContent = "";
-          workersOutput.textContent = "";
+    if (bestRestaurant == null) {
+        bestRestaurantOutput.textContent = "";
+        workersOutput.textContent = "";
 
-      } else {
-          bestRestaurantOutput.textContent = `Name: ${bestRestaurant} Average Salary: ${restaurants[bestRestaurant].averageSalary.toFixed(2)} Best Salary: ${restaurants[bestRestaurant].maxSalary.toFixed(2)}`;
-          workersOutput.textContent = restaurants[bestRestaurant].workers.sort((x, y) => y.salary - x.salary).map(z => `Name: ${z.name} With Salary: ${z.salary}`).join(" ");
-      }
+    } else {
+        bestRestaurantOutput.textContent =
+            `Name: ${bestRestaurant} Average Salary: ${restaurants[bestRestaurant].averageSalary.toFixed(2)}
+         Best Salary: ${restaurants[bestRestaurant].maxSalary.toFixed(2)}`;
 
+        workersOutput.textContent = restaurants[bestRestaurant].workers
+            .sort((a, b) => b.salary - a.salary)
+            .map(z => `Name: ${z.name} With Salary: ${z.salary}`)
+            .join(' ');
+
+    }
 } 
