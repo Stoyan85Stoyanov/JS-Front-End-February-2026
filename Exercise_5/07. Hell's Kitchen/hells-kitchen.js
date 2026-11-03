@@ -121,14 +121,7 @@ function solve() {
         workersOutput.textContent = "";
 
     } else {
-        bestRestaurantOutput.textContent =
-            `Name: ${bestRestaurant} Average Salary: ${restaurants[bestRestaurant].averageSalary.toFixed(2)}
-         Best Salary: ${restaurants[bestRestaurant].maxSalary.toFixed(2)}`;
-
-        workersOutput.textContent = restaurants[bestRestaurant].workers
-            .sort((a, b) => b.salary - a.salary)
-            .map(z => `Name: ${z.name} With Salary: ${z.salary}`)
-            .join(' ');
-
+        bestRestaurantOutput.textContent = `Name: ${bestRestaurant} Average Salary: ${restaurants[bestRestaurant].averageSalary.toFixed(2)} Best Salary: ${restaurants[bestRestaurant].maxSalary.toFixed(2)}`;
+        workersOutput.textContent = restaurants[bestRestaurant].workers.sort((a, b) => b.salary - a.salary).map(z => `Name: ${z.name} With Salary: ${z.salary}`).join(" ");
     }
 } 
