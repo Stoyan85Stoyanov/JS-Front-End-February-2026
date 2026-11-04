@@ -7,8 +7,8 @@ function subtract() {
     const firstNumber = Number(firstInput.value);
     const secondNumber = Number(secondInput.value);
 
-    const result = firstNumber - secondNumber;
-    const resultNumber = document.getElementById('result');
+    let result = firstNumber - secondNumber;
+    let resultNumber = document.getElementById('result');
 
     // запазване на числовата стойност от result в resultNumber
     // resultNumber.textContent = result.toString( );
