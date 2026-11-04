@@ -45,7 +45,7 @@ function solve() {
 
       const match = Array
          .from(row.children)
-         .some(td => td.textContent.includes(searchQuery));
+         .some(cell => searchQuery !== "" && cell.innerText.includes(searchQuery));
 
 
       if (match) {
@@ -56,6 +56,6 @@ function solve() {
       }
    }
 
-  
+
    searchInput.value = '';
 }
