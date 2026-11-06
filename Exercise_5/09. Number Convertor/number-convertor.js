@@ -1,4 +1,4 @@
-function solve() {
+// function solve() {
 
     // const inputNumber = Number(document.getElementById('input').value);
     // const selectedNumericSystem = document.getElementById('selectMenuTo').value;
@@ -19,7 +19,10 @@ function solve() {
     // function convertToHexadecimal(number) {
     //     return number.toString(16).toUpperCase();
     // }
+// }
 
+
+function solve() {
 
     const number = getInputNumber();
     const system = getSelectedSystem();
@@ -50,6 +53,5 @@ function solve() {
         document.getElementById('result').value = result;
 
     }
-
 }
 
