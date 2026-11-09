@@ -56,6 +56,36 @@
 // }
 
 
+// function solve() {
+
+//     const number = getInputNumber();
+//     const system = getSelectedSystem();
+
+//     const result = convertNumber(number, system);
+
+//     showResult(result);
+
+//     function getInputNumber() {
+//         return Number(document.getElementById('input').value);
+//     }
+
+//     function getSelectedSystem() {
+//         return document.getElementById('selectMenuTo').value;
+//     }
+
+//     function convertNumber(number, system) {
+//         return system === 'binary'
+//             ? number.toString(2)
+//             : number.toString(16).toUpperCase();
+//     }
+
+//     function showResult(result) {
+//         document.getElementById('result').value = result;
+
+//     }
+// }
+
+
 function solve() {
 
     const number = getInputNumber();
@@ -74,9 +104,9 @@ function solve() {
     }
 
     function convertNumber(number, system) {
-        return system === 'binary'
-            ? number.toString(2)
-            : number.toString(16).toUpperCase();
+        return system === 'hexadecimal'
+            ? number.toString(16).toUpperCase()
+            : number.toString(2);
     }
 
     function showResult(result) {
