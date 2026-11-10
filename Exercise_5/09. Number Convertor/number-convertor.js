@@ -91,9 +91,9 @@ function solve() {
     const number = getInputNumber();
     const system = getSelectedSystem();
 
-    const result = convertNumber(number, system);
+    const results = convertNumber(number, system);
 
-    showResult(result);
+    showResult(results);
 
     function getInputNumber() {
         return Number(document.getElementById('input').value);
