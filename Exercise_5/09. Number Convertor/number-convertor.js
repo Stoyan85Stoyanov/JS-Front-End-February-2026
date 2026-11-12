@@ -86,12 +86,39 @@
 // }
 
 
+// function solve() {
+
+//     const number = getInputNumber();
+//     const system = getSelectedSystem();
+
+//     const results = convertNumber(number, system);
+
+//     showResult(results);
+
+//     function getInputNumber() {
+//         return Number(document.getElementById('input').value);
+//     }
+
+//     function getSelectedSystem() {
+//         return document.getElementById('selectMenuTo').value;
+//     }
+
+//     function convertNumber(number, system) {
+//         return system === 'hexadecimal'
+//             ? number.toString(16).toUpperCase()
+//             : number.toString(2);
+//     }
+
+//     function showResult(result) {
+//         document.getElementById('result').value = result;
+
+//     }
+// }
+
+
 function solve() {
 
-    const number = getInputNumber();
-    const system = getSelectedSystem();
-
-    const results = convertNumber(number, system);
+    const results = convertNumber(getInputNumber(), getSelectedSystem());
 
     showResult(results);
 
