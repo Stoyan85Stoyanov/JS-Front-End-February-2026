@@ -51,12 +51,12 @@ function solve() {
         const index = [];
 
     rowElements.forEach((row) => {
-            const cells = row.children;
+            // const cells = row.children;
 
             const resultRow = {};
 
             for (const column of selectColumns) {
-                resultRow[column.propertyName] = cells[column.index].innerText;
+                resultRow[column.propertyName] = row.children[column.index].innerText;
             }
 
             index.push(resultRow);
