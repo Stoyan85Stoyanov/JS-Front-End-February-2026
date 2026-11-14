@@ -2,8 +2,8 @@ function city(input) {
 
     let entries = Object.entries(input);
     
-    for (let [key, values] of entries) {
-        console.log(`${key} -> ${values}`);    
+    for (let [key, value] of entries) {
+        console.log(`${key} -> ${value}`);    
     }
 }
 
