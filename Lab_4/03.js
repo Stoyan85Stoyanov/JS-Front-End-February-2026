@@ -1,11 +1,25 @@
+// function convertToObject(input) {
+
+//     let personJson = JSON.parse(input);
+
+//     let entries = Object.entries(personJson);
+
+//     for (let [key, values] of entries) {
+//         console.log(`${key}: ${values}`);
+//     }
+
+// }
+
+
+
 function convertToObject(input) {
 
-    let personJson = JSON.parse(input);
+    const personJson = JSON.parse(input);
 
-    let entries = Object.entries(personJson);
+    const entries = Object.keys(personJson);
 
-    for (let [key, values] of entries) {
-        console.log(`${key}: ${values}`);
+    for (const key of entries) {
+        console.log(`${key}: ${personJson[key]}`);
     }
 
 }
