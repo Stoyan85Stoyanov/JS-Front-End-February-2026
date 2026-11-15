@@ -1,9 +1,20 @@
+// function city(input) {
+
+//     let entries = Object.entries(input);
+    
+//     for (let [key, value] of entries) {
+//         console.log(`${key} -> ${value}`);    
+//     }
+// }
+
+
+
 function city(input) {
 
-    let entries = Object.entries(input);
+    const entries = Object.keys(input);
     
-    for (let [key, value] of entries) {
-        console.log(`${key} -> ${value}`);    
+    for (const key of entries) {
+        console.log(`${key} -> ${input[key]}`);    
     }
 }
 
