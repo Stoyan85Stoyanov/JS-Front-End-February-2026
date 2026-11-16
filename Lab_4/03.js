@@ -16,9 +16,9 @@ function convertToObject(input) {
 
     const personJson = JSON.parse(input);
 
-    const entries = Object.keys(personJson);
+    const entrie = Object.keys(personJson);
 
-    for (const key of entries) {
+    for (const key of entrie) {
         console.log(`${key}: ${personJson[key]}`);
     }
 
