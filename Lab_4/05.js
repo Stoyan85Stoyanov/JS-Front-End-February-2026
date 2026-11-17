@@ -8,12 +8,11 @@ function phoneBook(arrayOfStrings) {
         phoneNumberPerson[name] = phoneNumber;
     }
 
-    let entries = Object.entries(phoneNumberPerson);
+    const entries = Object.keys(phoneNumberPerson);
 
-    for (let [name, phoneNumber] of entries) {
-        console.log(`${name} -> ${phoneNumber}`);
+    for (const key of entries) {
+        console.log(`${key} -> ${phoneNumberPerson[key]}`);
     }
-
 }
 
 phoneBook(['Tim 0834212554',
