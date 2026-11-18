@@ -1,40 +1,63 @@
+// function meetings(arrayOfStrings) {
+
+//     let successfulMeetings = {};
+
+//     for (let meetings of arrayOfStrings) {
+
+//         let [weekday, name] = meetings.split(' ');
+
+//         // проверка дали денят е зает !!!
+//         if (weekday in successfulMeetings) {
+//             console.log(`Conflict on ${weekday}!`);
+
+//         } else {
+//             successfulMeetings[weekday] = name;
+//             console.log(`Scheduled for ${weekday}`);
+//         }
+//     }
+
+//     let entries = Object.entries(successfulMeetings);
+
+//     for (let [weekday, name] of entries) {
+//         console.log(`${weekday} -> ${name}`);
+//     }
+
+// }
+
+
 function meetings(arrayOfStrings) {
 
-    let successfulMeetings = {};
+    const successfulMeetings = {};
 
-    for (let meetings of arrayOfStrings) {
+    arrayOfStrings.forEach(entry => {
+        const [weekday, name] = entry.split(' ');
 
-        let [weekday, name] = meetings.split(' ');
+        weekday in successfulMeetings
+            ? console.log(`Conflict on ${weekday}!`)
+            : (successfulMeetings[weekday] = name,
+                console.log(`Scheduled for ${weekday}`));
+    });
 
-        // проверка дали денят е зает !!!
-        if (weekday in successfulMeetings) {
-            console.log(`Conflict on ${weekday}!`);
+    const entries = Object.keys(successfulMeetings);
 
-        } else {
-            successfulMeetings[weekday] = name;
-            console.log(`Scheduled for ${weekday}`);
-        }
+    for (const key of entries) {
+        console.log(`${key} -> ${successfulMeetings[key]}`);
     }
 
-    let entries = Object.entries(successfulMeetings);
-
-    for (let [weekday, name] of entries) {
-        console.log(`${weekday} -> ${name}`);
-    }
-   
 }
 
-// meetings(['Monday Peter',
-//     'Wednesday Bill',
-//     'Monday Tim',
-//     'Friday Tim']
-// );
 
-
-meetings(['Friday Bob',
-    'Saturday Ted',
-    'Monday Bill',
-    'Monday John',
-    'Wednesday George']
+meetings(['Monday Peter',
+    'Wednesday Bill',
+    'Monday Tim',
+    'Friday Tim']
 );
+
+
+// meetings(['Friday Bob',
+//     'Saturday Ted',
+//     'Monday Bill',
+//     'Monday John',
+//     'Wednesday George']
+// );
 
