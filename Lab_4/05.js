@@ -1,12 +1,29 @@
+// function phoneBook(arrayOfStrings) {
+
+//     let phoneNumberPerson = {};
+
+//     for (let contactPhoneNumber of arrayOfStrings) {
+
+//         let [name, phoneNumber] = contactPhoneNumber.split(' ');
+//         phoneNumberPerson[name] = phoneNumber;
+//     }
+
+//     const entries = Object.keys(phoneNumberPerson);
+
+//     for (const key of entries) {
+//         console.log(`${key} -> ${phoneNumberPerson[key]}`);
+//     }
+// }
+
+
 function phoneBook(arrayOfStrings) {
 
-    let phoneNumberPerson = {};
+    const phoneNumberPerson = {};
 
-    for (let contactPhoneNumber of arrayOfStrings) {
-
-        let [name, phoneNumber] = contactPhoneNumber.split(' ');
+     arrayOfStrings.forEach(entry => {
+        const [name, phoneNumber] = entry.split(' ');
         phoneNumberPerson[name] = phoneNumber;
-    }
+    });
 
     const entries = Object.keys(phoneNumberPerson);
 
@@ -14,6 +31,8 @@ function phoneBook(arrayOfStrings) {
         console.log(`${key} -> ${phoneNumberPerson[key]}`);
     }
 }
+
+
 
 phoneBook(['Tim 0834212554',
     'Peter 0877547887',
