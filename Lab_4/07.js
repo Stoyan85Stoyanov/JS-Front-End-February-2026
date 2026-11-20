@@ -30,13 +30,12 @@ function addressBook(arrayOfStrings) {
     });
 
     const entries = Object.keys(addressPeople)
-        .sort((x, y) => x.localeCompare(y));
+        .sort((a, b) => a.localeCompare(b));
 
 
     for (const key of entries) {
         console.log(`${key} -> ${addressPeople[key]}`);
     }
-
 }
 
 
