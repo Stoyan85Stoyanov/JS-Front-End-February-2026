@@ -12,14 +12,25 @@
 
 
 
+// function convertToObject(input) {
+
+//     const personJson = JSON.parse(input);
+
+//     const entrie = Object.keys(personJson);
+
+//     for (const key of entrie) {
+//         console.log(`${key}: ${personJson[key]}`);
+//     }
+
+// }
+
+
 function convertToObject(input) {
 
-    const personJson = JSON.parse(input);
-
-    const entrie = Object.keys(personJson);
+    const entrie = Object.keys(JSON.parse(input));
 
     for (const key of entrie) {
-        console.log(`${key}: ${personJson[key]}`);
+        console.log(`${key}: ${JSON.parse(input)[key]}`);
     }
 
 }
