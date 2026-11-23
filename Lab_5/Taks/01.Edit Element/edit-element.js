@@ -1,7 +1,14 @@
+// function editElement(htmlEl, strToFind, replacer) {
+    
+//     let originalHtmlText = htmlEl.textContent;
+//     let updateText = originalHtmlText.replaceAll(strToFind, replacer);
+    
+//     htmlEl.textContent = updateText;
+// }
+
+
+
 function editElement(htmlEl, strToFind, replacer) {
-    
-    let originalHtmlText = htmlEl.textContent;
-    let updateText = originalHtmlText.replaceAll(strToFind, replacer);
-    
-    htmlEl.textContent = updateText;
+     
+    htmlEl.textContent = htmlEl.textContent.replaceAll(strToFind, replacer);
 }
