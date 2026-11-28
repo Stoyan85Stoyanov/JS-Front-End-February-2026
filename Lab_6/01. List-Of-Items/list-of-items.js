@@ -1,11 +1,30 @@
+// function addItem() {
+
+//     const ulElement = document.getElementById('items');
+//     const inputElement = document.getElementById('newItemText');
+//     const text = inputElement.value.trim();
+//     const newLiElement = document.createElement('li');
+//     newLiElement.textContent = text;
+//     ulElement.appendChild(newLiElement);
+
+// }
+
+
 function addItem() {
 
-    const ulElement = document.getElementById('items');
-    const inputElement = document.getElementById('newItemText');
-    const text = inputElement.value.trim();
+    const ulElement = document.querySelector('#items');
+    const inputElement = document.querySelector('#newItemText');
+
+    if (inputElement.value == '') {
+        return;
+    }
+
     const newLiElement = document.createElement('li');
-    newLiElement.textContent = text;
+
+    newLiElement.textContent = inputElement.value.trim();
     ulElement.appendChild(newLiElement);
+
+    inputElement.value = '';
 
 }
 
@@ -27,7 +46,14 @@ function addItem() {
 //     // вмъкване на текст в ново създаденият li element
 //     newLiElement.textContent = text;
 
-//     // за да се визуализира в браузера, трябва да се прикачи към DOM дървото 
+//     // за да се визуализира в браузера, трябва да се прикачи към DOM дървото
 //     ulElement.appendChild(newLiElement);
 
 // }
+
+
+
+// проверка за да не добавя празен стринг
+    // if (inputElement.value == '') {
+    //     return;
+    // }
